@@ -1,6 +1,7 @@
-require('angular').module('app.about')
-  .controller('aboutCtrl', function ($scope) {
-    "use strict";
+"use strict";
 
-    $scope.name = 'Simple binding';
-  });
+import aboutService from './about.service'
+
+module.exports = function ($scope, aboutService) {
+  $scope.name = aboutService.tell();
+};

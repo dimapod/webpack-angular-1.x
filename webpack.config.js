@@ -1,3 +1,4 @@
+var webpack = require('webpack');
 module.exports = {
   context: __dirname + '/app',
   entry: './index.js',
@@ -5,6 +6,7 @@ module.exports = {
     path: __dirname + '/app',
     filename: 'bundle.js'
   },
+  devtool: 'source-map',
   module: {
     loaders: [
       {
@@ -22,6 +24,10 @@ module.exports = {
         query: {
           presets: ['es2015']
         }
+      },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000'
       }
     ]
   }
