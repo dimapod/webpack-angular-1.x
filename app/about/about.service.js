@@ -12,6 +12,6 @@ class AboutService {
   }
 }
 
-export default angular.module('app.about').register
+export default angular.module('app.about')
   .service('aboutService', AboutService)
   .name;

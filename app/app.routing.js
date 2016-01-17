@@ -1,6 +1,6 @@
 "use strict";
 
-export default function routing($stateProvider, $controllerProvider) {
+export default function routing($stateProvider) {
   $stateProvider
     .state('hello', {
       url: '/hello',
@@ -10,16 +10,6 @@ export default function routing($stateProvider, $controllerProvider) {
     .state('about', {
       url: '/about',
       template: require('./about/about.html'),
-      controller: 'aboutCtrl',
-      resolve: {
-        init: ($q) => {
-          return $q(function(resolve) {
-            require(['./about/about.ctrl'], function() {
-              $controllerProvider.register('aboutCtrl', require('./about/about.ctrl'));
-              resolve();
-            });
-          });
-        }
-      }
+      controller: 'aboutCtrl'
     });
 }
