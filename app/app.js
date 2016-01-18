@@ -1,9 +1,7 @@
 import angular from 'angular';
 import uirouter from 'angular-ui-router';
+import oclazyLoad from 'oclazyload';
 import routing from './app.routing';
 
-import hello from './hello/hello.module';
-import about from './about/about.module';
-
-angular.module('app', [uirouter, hello, about])
+angular.module('app', [oclazyLoad, uirouter])
   .config(routing);
