@@ -1,6 +1,7 @@
 "use strict";
 
 import angular from 'angular';
+import './about.less';
 
 class AboutService {
   constructor() {
@@ -12,6 +13,5 @@ class AboutService {
   }
 }
 
-export default angular.module('app.about').register
-  .service('aboutService', AboutService)
-  .name;
+angular.module('app').register
+  .service('aboutService', AboutService);

@@ -14,7 +14,7 @@ export default function routing($stateProvider, $controllerProvider) {
       resolve: {
         init: ($q) => {
           return $q(function(resolve) {
-            require(['./about/about.ctrl'], function() {
+            require(['./about/about.ctrl'], () => {
               $controllerProvider.register('aboutCtrl', require('./about/about.ctrl'));
               resolve();
             });
