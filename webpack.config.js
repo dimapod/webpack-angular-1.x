@@ -30,8 +30,5 @@ module.exports = {
         loader: 'url?limit=25000'
       }
     ]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-  ]
+  }
 };
