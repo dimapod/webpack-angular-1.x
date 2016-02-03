@@ -4,7 +4,6 @@ class Greet {
   constructor() {
     this.name = 'I\'am Groot!';
   }
-
   tell() {
     console.log('Greet: ' + this.name);
   }
