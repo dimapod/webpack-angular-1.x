@@ -5,7 +5,7 @@ export default function routing($stateProvider) {
     .state('hello', {
       url: '/hello',
       template: require('./hello/hello.html'),
-      controller: 'helloCtrl',
+      controller: 'helloCtrl as ctrl',
       resolve: {
         loadModule: ($q, $ocLazyLoad) => {
           return $q((resolve) => {
@@ -19,7 +19,7 @@ export default function routing($stateProvider) {
     .state('about', {
       url: '/about',
       template: require('./about/about.html'),
-      controller: 'aboutCtrl',
+      controller: 'aboutCtrl as ctrl',
       resolve: {
         loadModule: ($q, $ocLazyLoad) => {
           return $q((resolve) => {
